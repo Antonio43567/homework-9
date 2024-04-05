@@ -4,10 +4,15 @@ require_once "../app/models/Post.php";
 require_once "../app/controllers/PostController.php";
 
 //set our env variables
-$env = parse_ini_file('../.env');
+#$env = parse_ini_file('../.env');
 #var_dump($env);
-echo $env["DB_HOST"];
-require '../app/core/config.php';
+#echo $env["DB_HOST"];
+#require '../app/core/config.php';
+
+define('DBNAME', 'homework_9');
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASS', 'root');
 
 use app\controllers\PostController;
 
