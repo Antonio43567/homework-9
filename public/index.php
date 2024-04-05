@@ -1,9 +1,12 @@
 <?php
+require_once '../app/core/Database.php';
 require_once "../app/models/Post.php";
 require_once "../app/controllers/PostController.php";
 
 //set our env variables
 $env = parse_ini_file('../.env');
+#var_dump($env);
+echo $env["DB_HOST"];
 require '../app/core/config.php';
 
 use app\controllers\PostController;
@@ -67,5 +70,3 @@ if ($uriArray[1] === 'posts-delete-view' && $_SERVER['REQUEST_METHOD'] === 'GET'
 include '../public/assets/views/notFound.html';
 
 ?>
-
-
